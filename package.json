@@ -1,0 +1,50 @@
+{
+	"name": "@rbxts/fsm",
+	"description": "Generic finite state machine implementation for roblox-ts.",
+	"version": "1.0.0",
+	"main": "out/init.lua",
+	"license": "MIT",
+	"scripts": {
+		"build": "rbxtsc",
+		"clean": "rimraf out",
+		"prepublishOnly": "yarn clean && yarn build",
+		"test:compile": "rbxtsc --type=game",
+		"test:build": "rojo build default.project.json -o test.rbxl",
+		"test:run": "run-in-roblox --place ./test.rbxl --script ./out/__tests__/test-runner.server.lua",
+		"test": "yarn clean && yarn test:compile && yarn test:build && yarn test:run"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zyrakia/fsm"
+	},
+	"bugs": {
+		"url": "https://github.com/zyrakia/fsm/issues"
+	},
+	"types": "out/index.d.ts",
+	"files": [
+        "!**/__tests__/**",
+        "!**/*.tsbuildinfo",
+		"out",
+        "README.md",
+        "LICENSE.md",
+        "package.json"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"keywords": [
+		"roblox",
+		"roblox-ts",
+		"rbxts",
+		"finite",
+		"state",
+		"machine",
+		"fsm"
+	],
+	"devDependencies": {
+		"@rbxts/compiler-types": "^1.2.7-types.1",
+		"@rbxts/services": "^1.2.0",
+		"@rbxts/testez": "^0.3.1-ts.7",
+		"@rbxts/types": "^1.0.556"
+	}
+}
