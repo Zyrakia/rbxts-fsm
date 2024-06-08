@@ -15,10 +15,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/zyrakia/fsm"
+		"url": "https://github.com/zyrakia/rbxts-fsm"
 	},
 	"bugs": {
-		"url": "https://github.com/zyrakia/fsm/issues"
+		"url": "https://github.com/zyrakia/rbxts-fsm/issues"
 	},
 	"types": "out/index.d.ts",
 	"files": [
